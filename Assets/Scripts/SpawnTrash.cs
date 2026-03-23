@@ -7,12 +7,21 @@ public class SpawnTrash : MonoBehaviour
 {   
 
     [SerializeField] private List<GameObject> trashPrefab;
-    
+    [SerializeField] private float delay = 0.3f;
+    [SerializeField] private List<Vector3> factors;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SpawnObject(trashPrefab,0.1f);
+            this.factors = new List<Vector3>()
+            {
+            new Vector3(0.05f, 0, 0.05f),
+            new Vector3(-0.05f, 0f, -0.05f),
+            new Vector3(0.05f, 0f,  -0.05f),
+            new Vector3(-0.05f, 0f, 0.05f)
+            };
+        SpawnObject(trashPrefab,delay);
 
     }
 
@@ -23,9 +32,10 @@ public class SpawnTrash : MonoBehaviour
     }
     private IEnumerator SpawnDelay(List<GameObject> trashObject, float delay)
     {
+     
         for (int i = 0; i < trashObject.Count; i++)
-        {
-            Instantiate(trashObject[i], transform.position, Quaternion.identity);
+        {   
+            Instantiate(trashObject[i], transform.position + factors[i % 4], Quaternion.identity);
             yield return new WaitForSeconds(delay);
 
         }
