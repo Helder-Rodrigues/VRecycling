@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 public enum TrashType 
 {
@@ -6,7 +7,7 @@ public enum TrashType
     Paper,
     Plastic,
     Glass,
-    Metal
+    Metal,
 }
 
 public class Trash : MonoBehaviour
