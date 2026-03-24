@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c737219c6b7f95847a71bf5eefa03102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRSceneInput
-  fader: {fileID: 0}
+  fader: {fileID: 1736628551}
   sceneToLoad: SortTrash
 --- !u!4 &183040163
 Transform:
