@@ -29,6 +29,8 @@ public class TreeManager : MonoBehaviour
     public void ShrinkTree()
     {
         currentScale -= sizeChangeAmount;
+        if(currentScale < 0.1)
+            currentScale = 0;
         StopCoroutine(SizeTree());
         StartCoroutine(SizeTree(-1));
     }
