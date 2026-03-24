@@ -12,10 +12,13 @@ public class TrashBin : MonoBehaviour
             if (trashType == trash.TrashType) // Correct trash in bin
             {
                 print("Correct trash type");
+                TreeManager.Instance.GrowTree();
             }
             else // Wrong trash
             {
                 print("Wrong trash type");
+                TreeManager.Instance.ShrinkTree();
+                
             }
             Destroy(trash.gameObject);
         }

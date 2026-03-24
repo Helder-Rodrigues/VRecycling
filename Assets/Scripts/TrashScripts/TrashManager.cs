@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +14,11 @@ public class TrashManager : MonoBehaviour
             Instance = this;
         else
             Destroy(this);
+    }
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 
     // Whenever trash is gathered in the vacuum call this
