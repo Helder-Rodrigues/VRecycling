@@ -82,8 +82,11 @@ public class TrashGroundSpawner : MonoBehaviour
     {
         GameObject obj = Instantiate(prefab, position, Quaternion.identity, parent);
 
+        PrefabReference refScript = obj.AddComponent<PrefabReference>();
+        refScript.originalPrefab = prefab;
+        
         //temp
-        obj.transform.localScale = Vector3.one;
+        obj.transform.localScale = new(0.15f, 0.15f, 0.15f);
         
         Collider col = obj.GetComponent<Collider>();
         if (col != null)
