@@ -18,7 +18,7 @@ public class TrashGroundSpawner : MonoBehaviour
     [SerializeField] private Transform parent;
 
     [Header("Spawn Settings")]
-    [SerializeField] private int trashQtyToSpawn = 10;
+    public int trashQtyToSpawn = 10;
     private int trashSpawned = 0;
     [SerializeField] private int maxAttempts = 10;
     [SerializeField] private LayerMask overlapMask;
