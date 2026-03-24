@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpawnTrash : MonoBehaviour
 {   
+    public static SpawnTrash Instance;
 
     [SerializeField] private List<GameObject> trashPrefab;
     [SerializeField] private float delay = 0.3f;
@@ -14,38 +15,31 @@ public class SpawnTrash : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-            this.factors = new List<Vector3>()
+        Instance = this;
+        
+        this.factors = new List<Vector3>()
             {
             new Vector3(0.05f, 0, 0.05f),
             new Vector3(-0.05f, 0f, -0.05f),
             new Vector3(0.05f, 0f,  -0.05f),
             new Vector3(-0.05f, 0f, 0.05f)
             };
-        SpawnObject(trashPrefab,delay);
+        SpawnObject(trashPrefab);
 
     }
 
     
-    void SpawnObject(List<GameObject> trashObject, float delay)
+    public void SpawnObject(List<GameObject> trashObject)
     {
-        StartCoroutine(SpawnDelay(trashObject, delay));
+        StartCoroutine(SpawnDelay(trashObject));
     }
-    private IEnumerator SpawnDelay(List<GameObject> trashObject, float delay)
+    
+    private IEnumerator SpawnDelay(List<GameObject> trashObject)
     {
-     
         for (int i = 0; i < trashObject.Count; i++)
         {   
             Instantiate(trashObject[i], transform.position + factors[i % 4], Quaternion.identity);
             yield return new WaitForSeconds(delay);
-
         }
-        
-
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
