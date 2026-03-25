@@ -376,6 +376,7 @@ Transform:
   - {fileID: 954001389379273395}
   - {fileID: 8376415084419030567}
   - {fileID: 1234704929332774812}
+  - {fileID: 7223371111862920909}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!65 &6047311805043305006
@@ -440,8 +441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashBin
   trashType: 0
   audioSource: {fileID: 4783448368986767827}
-  correctSound: {fileID: 8300000, guid: e4647eea9499ef84a89070c6ad44f195, type: 3}
-  wrongSound: {fileID: 0}
+  winningSound: {fileID: 8300000, guid: e4647eea9499ef84a89070c6ad44f195, type: 3}
+  failureSound: {fileID: 8300000, guid: b7efb3e728d5c044ebf2f63123f47237, type: 3}
 --- !u!82 &4783448368986767827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1242,6 +1243,102 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1303178047837096049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1785059065687564596}
+    m_Modifications:
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.29878995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.29879
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.29878995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 9034380188908188678, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      propertyPath: m_Name
+      value: Arrow_3D_Icon_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9034380188908188678, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7114408082796319967}
+  m_SourcePrefab: {fileID: 100100000, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+--- !u!4 &7223371111862920909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8514970194144308924, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+  m_PrefabInstance: {fileID: 1303178047837096049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8031397450278780023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9034380188908188678, guid: 3747f4197f58149518ec66a3a9522e06, type: 3}
+  m_PrefabInstance: {fileID: 1303178047837096049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7114408082796319967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8031397450278780023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92aae136d02c25344aeb4e0d3c30ee41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TrashArrowAnimation
+  heightChangeAmount: 0.5
+  heightChangeSpeed: 0.2
 --- !u!1001 &4472644888394958547
 PrefabInstance:
   m_ObjectHideFlags: 0
