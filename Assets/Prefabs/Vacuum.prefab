@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436835567602504923}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 6930058832432181188}
   - component: {fileID: 4246705008737989916}
   - component: {fileID: 371866356766308237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: collectCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 7240612656232875276}
   - component: {fileID: 3487375148854850657}
   - component: {fileID: 2941785013522709713}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: SliderCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2898491882718675680}
   - component: {fileID: 4361296041913881882}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -465,7 +465,7 @@ GameObject:
   - component: {fileID: 3342949887256502510}
   - component: {fileID: 6666363468322208315}
   - component: {fileID: 2507204485076347349}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 2259847332577685526}
   - component: {fileID: 7432850757033514397}
   - component: {fileID: 749798074490960058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: '[BuildingBlock] HandGrabInstallationRoutine'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 4231413822584513275}
   - component: {fileID: 8339383713406060833}
   - component: {fileID: 6482719104163437394}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,6 +734,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vacuum
       objectReference: {fileID: 0}
+    - target: {fileID: -6689036041284674117, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3340496657816982298, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -2669186158270739662, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 473110552500162230, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2774220344278030320, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5
@@ -774,6 +790,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6715728128834183352, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -796,6 +816,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5310727422814205366}
+    - targetCorrespondingSourceObject: {fileID: -6689036041284674117, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3359284330942991769}
   m_SourcePrefab: {fileID: -5645937942226959685, guid: 5303c428a565dff43b2201d262cf67d7, type: 3}
 --- !u!4 &7722689161171066766 stripped
 Transform:
@@ -878,3 +901,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7778703, y: 0.15731883, z: 0.37967128}
   m_Center: {x: 0.012099385, y: -0.0040305853, z: 0.18983564}
+--- !u!114 &3359284330942991769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964413069608080837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af17d923123d76f488c0648e3356393c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GrabTriggerDetector
+  raycastDistance: 2
+  grabLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  targetObjectName: Vacuum

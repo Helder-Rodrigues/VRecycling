@@ -572,34 +572,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1069015364390654261, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1197831549090031814, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1682559558467502924, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1939510407899151757, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020050977506632856, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2958356800195566473, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262738762309279211, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     - target: {fileID: 3342949887256502510, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -619,18 +591,6 @@ PrefabInstance:
     - target: {fileID: 4361296041913881882, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
       propertyPath: m_TargetGraphic
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5421298066215143112, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6669407957436740782, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6859268280261408735, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7722689161171066766, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -676,14 +636,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vacuum
       objectReference: {fileID: 0}
-    - target: {fileID: 7964413069608080837, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 9105632864460710449, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -709,11 +661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af17d923123d76f488c0648e3356393c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GrabTriggerDetector
-  raycastDistance: 2
-  grabLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  targetObjectName: Vacuum
 --- !u!1 &1319308492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,17 +1333,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1345272205370862149, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
-      propertyPath: m_TagString
-      value: leftController
-      objectReference: {fileID: 0}
     - target: {fileID: 3517091908874326076, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
       propertyPath: m_Color.a
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4158304440434620236, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
-      propertyPath: m_TagString
-      value: leftController
       objectReference: {fileID: 0}
     - target: {fileID: 5246363478752591351, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1449,14 +1388,6 @@ PrefabInstance:
     - target: {fileID: 5574400247547469851, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
       propertyPath: m_SizeDelta.y
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6278180651527431030, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
-      propertyPath: m_TagString
-      value: rightController
-      objectReference: {fileID: 0}
-    - target: {fileID: 8952744979392577151, guid: 73bd5679c9dcac54b8f8bd5733002bdd, type: 3}
-      propertyPath: m_TagString
-      value: rightController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
