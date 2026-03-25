@@ -27,8 +27,10 @@ public class Vacuum : MonoBehaviour
         
         PrefabReference refScript = other.GetComponent<PrefabReference>();
         if (refScript != null && refScript.originalPrefab != null)
+        {
             audioSource.PlayOneShot(suckingSound);
-        TrashManager.Instance.AddTrashToList(refScript.originalPrefab);
+            TrashManager.Instance.AddTrashToList(refScript.originalPrefab);
+        }
 
         Destroy(other.gameObject);
         Debug.Log("slider.value = " + slider.value);
