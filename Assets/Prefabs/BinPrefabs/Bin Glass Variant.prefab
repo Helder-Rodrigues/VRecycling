@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: trashType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5169158257830702990, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
+      propertyPath: correctSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e4647eea9499ef84a89070c6ad44f195, type: 3}
     - target: {fileID: 7410419630337283230, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
       propertyPath: m_text
       value: Glass
