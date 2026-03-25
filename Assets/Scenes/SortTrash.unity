@@ -2421,6 +2421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bin Waste
       objectReference: {fileID: 0}
+    - target: {fileID: 7910838353985505693, guid: 5098d6bdb4ca4834db12ae7aabb6faa2, type: 3}
+      propertyPath: m_fontSize
+      value: 5.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2705,6 +2709,10 @@ PrefabInstance:
     - target: {fileID: 4199015329739242180, guid: 1297ae8cad5654a4787dabf675b5f84b, type: 3}
       propertyPath: m_Name
       value: Bin Organic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847190679095342866, guid: 1297ae8cad5654a4787dabf675b5f84b, type: 3}
+      propertyPath: heightChangeSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -6,16 +6,19 @@ public class TimeKeeper : MonoBehaviour
     private float endTime;
     private bool isRunning = false;
 
-    public static TimeKeeper Instance;
+    public static TimeKeeper Instance { get; private set; }
 
     void Awake()
     {
-        Instance = this;
-    }
+        // Singleton pattern
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // destroy duplicate
+            return;
+        }
 
-    void Start()
-    {
-        StartTimer();
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // persist across scenes
     }
 
     public void StartTimer()
@@ -32,9 +35,6 @@ public class TimeKeeper : MonoBehaviour
 
     public float GetTime()
     {
-        if (isRunning)
-            return Time.time - startTime;
-        else
-            return endTime - startTime;
+        return isRunning ? Time.time - startTime : endTime - startTime;
     }
 }
