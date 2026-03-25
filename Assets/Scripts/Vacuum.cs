@@ -7,6 +7,7 @@ public class Vacuum : MonoBehaviour
 {
     [SerializeField] private TrashGroundSpawner trashInfo;
     [SerializeField] private Slider slider;
+    [SerializeField] private AudioSource collectingSound;
 
     private float trashValue = 0.1f;
     
@@ -20,6 +21,7 @@ public class Vacuum : MonoBehaviour
         if (!other.CompareTag("Trash") || slider.value > 0.99f)
             return;
 
+        collectingSound.Play();
         PrefabReference refScript = other.GetComponent<PrefabReference>();
         if (refScript != null && refScript.originalPrefab != null)
             TrashManager.Instance.AddTrashToList(refScript.originalPrefab);
