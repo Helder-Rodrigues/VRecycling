@@ -52,16 +52,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bin Waste Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3624377061237167121, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169158257830702990, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7410419630337283230, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
       propertyPath: m_text
       value: Non-Recyclable
       objectReference: {fileID: 0}
     - target: {fileID: 7410419630337283230, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
       propertyPath: m_fontSize
-      value: 5
+      value: 7.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3624377061193623765, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01ede03b59cad7c47a4c8de196b3a03e, type: 3}

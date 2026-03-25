@@ -7,6 +7,10 @@ public class TrashManager : MonoBehaviour
     public static TrashManager Instance;
     
     private static List<GameObject> trashList = new List<GameObject>();
+    
+    private int trashInScene = 0;
+
+    public int TrashInScene => trashInScene;
 
     private void Awake()
     {
@@ -33,9 +37,15 @@ public class TrashManager : MonoBehaviour
         if (SpawnTrash.Instance)
         {
             SpawnTrash.Instance.SpawnObject(trashList);
+            trashInScene = trashList.Count;
             trashList.Clear();
         }
     }
     
     public List<GameObject> GetTrashList() =>  trashList; 
+
+    public void RemoveTrash()
+    {
+        trashInScene--;
+    }
 }

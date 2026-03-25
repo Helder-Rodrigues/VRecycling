@@ -6,7 +6,16 @@ public class TrashBin : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip winningSound;
     [SerializeField] private AudioClip failureSound;
+    [SerializeField] private Renderer guideVisual;
 
+    public TrashType TrashType => trashType;
+
+
+    public void ToggleGuideVisual(bool toggle)
+    {
+        guideVisual.enabled = toggle;
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         print("Trigger entered");
@@ -25,6 +34,7 @@ public class TrashBin : MonoBehaviour
                 TreeManager.Instance.ShrinkTree();
                 
             }
+            TrashManager.Instance.RemoveTrash();
             Destroy(trash.gameObject);
         }
     }
