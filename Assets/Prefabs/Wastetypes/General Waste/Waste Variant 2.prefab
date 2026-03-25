@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2242741700440739101, guid: 88301e49c2a8ff040a2585af9cbd6b24, type: 3}
       propertyPath: m_Name
-      value: Waste Variant
+      value: Waste Variant 2
       objectReference: {fileID: 0}
     - target: {fileID: 4070283866144825555, guid: 88301e49c2a8ff040a2585af9cbd6b24, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -63,26 +63,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2242741700440739101, guid: 88301e49c2a8ff040a2585af9cbd6b24, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2958625656293122135}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88301e49c2a8ff040a2585af9cbd6b24, type: 3}
---- !u!1 &4154238159337762184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2242741700440739101, guid: 88301e49c2a8ff040a2585af9cbd6b24, type: 3}
-  m_PrefabInstance: {fileID: 2790261620998856853}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2958625656293122135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4154238159337762184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a9d9066982ef7049ba0d65ea5d0644e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trash
-  trashType: 0
