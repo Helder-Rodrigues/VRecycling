@@ -164,7 +164,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Vacuum
   trashInfo: {fileID: 0}
   slider: {fileID: 4361296041913881882}
-  collectingSound: {fileID: 371866356766308237}
+  audioSource: {fileID: 371866356766308237}
+  suckingSound: {fileID: 8300000, guid: 9f1b1029e39fa2844bca441ef5c51aa8, type: 3}
 --- !u!82 &371866356766308237
 AudioSource:
   m_ObjectHideFlags: 0
@@ -176,7 +177,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9f1b1029e39fa2844bca441ef5c51aa8, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
