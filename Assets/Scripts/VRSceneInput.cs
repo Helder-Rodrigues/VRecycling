@@ -7,8 +7,7 @@ public class VRSceneInput : MonoBehaviour
 
     void Update()
     {
-        if (
-            OVRInput.GetDown(OVRInput.Button.One) ||   
+        if (OVRInput.GetDown(OVRInput.Button.One) ||   
             OVRInput.GetDown(OVRInput.Button.Two))
         {
             fader.FadeAndLoadScene(sceneToLoad);

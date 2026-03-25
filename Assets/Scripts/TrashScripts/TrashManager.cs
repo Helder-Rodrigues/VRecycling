@@ -11,14 +11,14 @@ public class TrashManager : MonoBehaviour
     private void Awake()
     {
         if (!Instance)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+            
+            trashList.Clear();
+        }
         else
             Destroy(this);
-    }
-
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
     }
 
     // Whenever trash is gathered in the vacuum call this
@@ -36,4 +36,6 @@ public class TrashManager : MonoBehaviour
             trashList.Clear();
         }
     }
+    
+    public List<GameObject> GetTrashList() =>  trashList; 
 }

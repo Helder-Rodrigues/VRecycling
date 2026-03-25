@@ -27,4 +27,5 @@ public class Vacuum : MonoBehaviour
         Destroy(other.gameObject);
         slider.value += trashValue;
     }
+
 }
