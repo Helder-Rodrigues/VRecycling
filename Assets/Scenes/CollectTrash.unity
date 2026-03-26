@@ -825,7 +825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &170296967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 224587271}
   - component: {fileID: 224587270}
   - component: {fileID: 224587269}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ISDK_TeleportInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1228,7 +1228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &324519244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1451,7 +1451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &431626649
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1763,7 +1763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &497299421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1964,7 +1964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &543127511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2192,7 +2192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &595029639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2393,7 +2393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &692053815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2639,7 +2639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &728052972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3132,7 +3132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &937216683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3453,8 +3453,7 @@ MonoBehaviour:
   - {fileID: 6591209922517388554, guid: 7b5394d99e2c3614a9a0fe88e0f6ba56, type: 3}
   - {fileID: 6591209922517388554, guid: 8a4ee795d24b32342bed2f9738e03618, type: 3}
   - {fileID: 6591209922517388554, guid: b051419b16741bc49915667b7ab33ce9, type: 3}
-  spawnAreas:
-  - {fileID: 1187769109}
+  spawnAreas: []
   minSpawnTime: 2
   maxSpawnTime: 7
   parent: {fileID: 1175343357}
@@ -4448,12 +4447,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -2488646483061606077, guid: 5dffc00355cf4444ebd6efda6d6135cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2488646483061606077, guid: 5dffc00355cf4444ebd6efda6d6135cd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5dffc00355cf4444ebd6efda6d6135cd, type: 3}
       propertyPath: m_Name
       value: parco con fontana
+      objectReference: {fileID: 0}
+    - target: {fileID: 6284697741876384908, guid: 5dffc00355cf4444ebd6efda6d6135cd, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6284697741876384908, guid: 5dffc00355cf4444ebd6efda6d6135cd, type: 3}
       propertyPath: m_IsActive
@@ -5375,7 +5382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1399891889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6490,7 +6497,7 @@ GameObject:
   - component: {fileID: 1660946382}
   - component: {fileID: 1660946381}
   - component: {fileID: 1660946380}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ISDK_TeleportInteraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6746,7 +6753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1770217235
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7352,7 +7359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1851571821
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7785,7 +7792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &2064853607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7954,6 +7961,7 @@ SceneRoots:
   - {fileID: 1799352016}
   - {fileID: 183040163}
   - {fileID: 1920995020}
+  - {fileID: 1175343357}
   - {fileID: 1870082370}
   - {fileID: 1187769108}
   - {fileID: 830289406}
@@ -7974,6 +7982,5 @@ SceneRoots:
   - {fileID: 543127514}
   - {fileID: 1358658087}
   - {fileID: 1604270819}
-  - {fileID: 1175343357}
   - {fileID: 1241573106}
   - {fileID: 1345961693}
