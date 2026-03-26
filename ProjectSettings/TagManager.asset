@@ -7,6 +7,20 @@ TagManager:
   - Trash
   - leftController
   - rightController
+  - QDSUIBackplateGradient
+  - QDSUIToggleBorderlessButton
+  - QDSUIPrimaryButton
+  - QDSUISecondaryButton
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - QDSUITextInvertedColor
+  - QDSUIIcon
+  - QDSUITextSecondaryInvertedColor
+  - QDSUIToggleButton
+  - QDSUIToggleSwitch
+  - QDSUITooltip
+  - QDSUIBorderlessButton
+  - QDSUITextSecondaryColor
   layers:
   - Default
   - TransparentFX
@@ -16,7 +30,7 @@ TagManager:
   - UI
   - Ground
   - Grabbable
-  - 
+  - Overlay UI
   - 
   - 
   - 
