@@ -85,9 +85,6 @@ public class TrashGroundSpawner : MonoBehaviour
         PrefabReference refScript = obj.AddComponent<PrefabReference>();
         refScript.originalPrefab = prefab;
         
-        //temp
-        obj.transform.localScale = new(0.15f, 0.15f, 0.15f);
-        
         Collider col = obj.GetComponent<Collider>();
         if (col != null)
         {
