@@ -5,30 +5,22 @@ using UnityEngine;
 public class GrabTriggerDetector : MonoBehaviour
 {
     [SerializeField] private BoxCollider vacuumColider;
-        
-    private Grabbable grabbable;
-
-    [Header("Raycast Settings")]
-    public float raycastDistance = 2f; // distance for the raycast
-    public LayerMask grabLayer; // specify layers to detect the object (e.g. Vacuum)
-    public string targetObjectName = "Vacuum"; // object to grab
 
     private bool leftInside = false;
+    private bool leftTriggerDown = false;
+
     private bool rightInside = false;
+    private bool rightTriggerDown = false;
 
     private bool soundActivated = false;
-    
-    void Start()
-    {
-        grabbable = GetComponent<Grabbable>();
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (!other.tag.ToLower().Contains("controller"))
             return;
-        
-        if (GetIfLeft(other))
+
+        bool isLeft = GetIfLeft(other);
+        if (isLeft)
             leftInside = true;
         else
             rightInside = true;
@@ -38,61 +30,92 @@ public class GrabTriggerDetector : MonoBehaviour
     {
         if (!other.tag.ToLower().Contains("controller"))
             return;
-        
-        if (GetIfLeft(other))
+
+        bool isLeft = GetIfLeft(other);
+        if (isLeft)
             leftInside = false;
         else
             rightInside = false;
     }
 
-    private bool GetIfLeft(Collider other) => other.tag.ToLower().Contains("left");
+    private bool GetIfLeft(Collider other)
+    {
+        bool result = other.tag.ToLower().Contains("left");
+        return result;
+    }
 
     void Update()
     {
         bool leftTriggerDown = OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
         bool leftTriggerUp = OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.LTouch);
-        
+
         bool rightTriggerDown = OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
         bool rightTriggerUp = OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
-        
-        if (soundActivated)
+
+        if (leftTriggerUp)
+            DeactivateVacuum(true);
+        if (rightTriggerUp)
+            DeactivateVacuum(false);
+
+        if (leftTriggerDown && rightTriggerDown)
             return;
-        
-        if (leftInside)
+
+        if (leftInside && leftTriggerDown)
+            ActivateVacuum(true);
+        if (rightInside && rightTriggerDown)
+            ActivateVacuum(false);
+    }
+
+    private void ActivateVacuum(bool leftBtnDown)
+    {
+        if (leftBtnDown)
         {
             if (leftTriggerDown)
-                ActivateVacuum();
-            else if (leftTriggerUp)
-                DeactivateVacuum();
+                return;
+            leftTriggerDown = true;
         }
-        
-        if (soundActivated)
-            return;
-
-        if (rightInside)
+        else
         {
             if (rightTriggerDown)
-                ActivateVacuum();
-            else if (rightTriggerUp)
-                DeactivateVacuum();
+                return;
+            rightTriggerDown = true;
         }
-    }
 
-    private void ActivateVacuum()
-    {
-        // start sound
-
+        if (soundActivated)
+            return;
         soundActivated = true;
-                    
         vacuumColider.enabled = true;
     }
-    
-    private void DeactivateVacuum()
+
+    private void DeactivateVacuum(bool leftBtnUp)
     {
-        // stop sound
-                
+        Debug.Log("left: " + leftBtnUp);
+        if (leftBtnUp)
+        {
+            if (!leftTriggerDown)
+                return;
+            Debug.Log("doing: "  + leftTriggerDown);
+            
+            leftTriggerDown = false;
+
+            if (rightTriggerDown)
+                return;
+            Debug.Log("turning off: " + leftTriggerDown);
+            
+        }
+        else
+        {
+            if (!rightTriggerDown)
+                return;
+            
+            rightTriggerDown = false;
+
+            if (leftTriggerDown)
+                return;
+        }
+
         soundActivated = false;
-                    
         vacuumColider.enabled = false;
+        Debug.Log("nice: " + vacuumColider.enabled);
     }
 }
