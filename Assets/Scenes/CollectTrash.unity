@@ -3660,7 +3660,7 @@ MonoBehaviour:
   minSpawnTime: 1
   maxSpawnTime: 5
   parent: {fileID: 1175343357}
-  maxAttempts: 10
+  maxAttempts: 100
   overlapMask:
     serializedVersion: 2
     m_Bits: 8
@@ -4050,6 +4050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1f2598b504ef544be524076b7f9884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashScripts.DeleteArea
+  spawner: {fileID: 1175343356}
 --- !u!65 &1208953884
 BoxCollider:
   m_ObjectHideFlags: 0

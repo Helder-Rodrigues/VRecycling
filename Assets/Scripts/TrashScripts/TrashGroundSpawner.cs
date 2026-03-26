@@ -44,7 +44,7 @@ public class TrashGroundSpawner : MonoBehaviour
         }
     }
 
-    private void TrySpawn()
+    public void TrySpawn()
     {
         if (prefabs.Count == 0 || spawnAreas.Count == 0)
             return;
