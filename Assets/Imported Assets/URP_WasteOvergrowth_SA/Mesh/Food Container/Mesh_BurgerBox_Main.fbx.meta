@@ -1,9 +1,21 @@
 fileFormatVersion: 2
 guid: 53012080f79b168468896b4f0ce142fb
+AssetOrigin:
+  serializedVersion: 1
+  productId: 290387
+  packageName: WasteOvergrowth - Comprehensive Trash and Waste Pack
+  packageVersion: 1.0
+  assetPath: Assets/URP_WasteOvergrowth_SA/Mesh/Food Container/Mesh_BurgerBox_Main.fbx
+  uploadId: 683873
 ModelImporter:
-  serializedVersion: 22200
+  serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FoodBox_opaque
+    second: {fileID: 2100000, guid: 2c8803a5f8d224b459e7983ec34da735, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,8 +28,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -58,6 +68,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -107,10 +120,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 290387
-  packageName: WasteOvergrowth - Comprehensive Trash and Waste Pack
-  packageVersion: 1.0
-  assetPath: Assets/URP_WasteOvergrowth_SA/Mesh/Food Container/Mesh_BurgerBox_Main.fbx
-  uploadId: 683873
