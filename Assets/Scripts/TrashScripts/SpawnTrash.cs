@@ -24,14 +24,7 @@ public class SpawnTrash : MonoBehaviour
             new Vector3(0.05f, 0f,  -0.05f),
             new Vector3(-0.05f, 0f, 0.05f)
             };
-
-        /*
-        List<GameObject> trashToSpawn = TrashManager.Instance.GetTrashList();
-        if (trashToSpawn.Count == 0)
-            trashToSpawn = trashPrefab;
-            
-        SpawnObject(trashToSpawn);
-        */
+        
         foreach (var trash in trashPrefab)
         {
             TrashManager.Instance.AddTrashToList(trash);

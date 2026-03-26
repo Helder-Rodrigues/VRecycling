@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class TrashGroundSpawner : MonoBehaviour
 {
-    [Header("Prefabs to Spawn")]
-    [SerializeField] private List<GameObject> prefabs;
+    [Header("Prefabs to Spawn")] [SerializeField]
+    private List<GameObject> prefabs;
 
-    [Header("Spawn Areas (BoxColliders)")]
-    [SerializeField] private List<BoxCollider> spawnAreas;
+    [Header("Spawn Areas (BoxColliders)")] [SerializeField]
+    private List<BoxCollider> spawnAreas;
 
-    [Header("Spawn Timing")]
-    [SerializeField] private float minSpawnTime = 1f;
+    [Header("Spawn Timing")] [SerializeField]
+    private float minSpawnTime = 1f;
+
     [SerializeField] private float maxSpawnTime = 5f;
 
-    [Header("Trash Parent")]
-    [SerializeField] private Transform parent;
+    [Header("Trash Parent")] [SerializeField]
+    private Transform parent;
 
-    [Header("Spawn Settings")]
-    private int trashSpawned = 0;
+    [Header("Spawn Settings")] private int trashSpawned = 0;
     [SerializeField] private int maxAttempts = 10;
     [SerializeField] private LayerMask overlapMask;
     private float yOffset = 0.1f;
-    
-    [Header("Player")]
-    [SerializeField] private Transform player;
+
+    [Header("Player")] [SerializeField] private Transform player;
     [SerializeField] private float minDistanceFromPlayer = 10f;
     [SerializeField] private bool drawDistanceGizmos = false;
-    
+
     private void Start()
     {
         StartCoroutine(SpawnRoutine());
@@ -76,19 +75,40 @@ public class TrashGroundSpawner : MonoBehaviour
         float distance = Vector3.Distance(position, player.position);
         return distance >= minDistanceFromPlayer;
     }
-    
+
     private void Spawn(GameObject prefab, Vector3 position)
     {
         GameObject obj = Instantiate(prefab, position, Quaternion.identity, parent);
 
         PrefabReference refScript = obj.AddComponent<PrefabReference>();
         refScript.originalPrefab = prefab;
-        
+
         Collider col = obj.GetComponent<Collider>();
         if (col != null)
         {
             float height = col.bounds.extents.y;
             obj.transform.position += Vector3.up * height;
+        }
+
+        AdjustPositionAboveSurface(obj);
+    }
+
+    private void AdjustPositionAboveSurface(GameObject obj)
+    {
+        RaycastHit hit;
+        float raycastDistance = 10f; // You can adjust this distance based on the size of the object
+
+        // Cast a ray downward from the object's position
+        if (Physics.Raycast(obj.transform.position, Vector3.down, out hit, raycastDistance))
+        {
+            // If it hits something, adjust the position to be above the hit point
+            // This ensures the object doesn't fall below the ground
+            obj.transform.position = new Vector3(obj.transform.position.x,
+                hit.point.y + obj.GetComponent<Collider>().bounds.extents.y, obj.transform.position.z);
+
+            Debug.Log($"Adjusted position to: {obj.transform.position} after raycast hit");
+
+            obj.GetComponent<MeshRenderer>().enabled = false;
         }
     }
 
@@ -127,7 +147,7 @@ public class TrashGroundSpawner : MonoBehaviour
 
         return worldPoint;
     }
-    
+
     void OnDrawGizmos()
     {
         if (player == null || !drawDistanceGizmos)

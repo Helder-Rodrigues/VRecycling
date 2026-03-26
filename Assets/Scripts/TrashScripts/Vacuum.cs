@@ -15,7 +15,7 @@ public class Vacuum : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Trash") || slider.value > 0.99f)
+        if (!other.CompareTag("Trash") || slider.value > 0.999f)
             return;
         
         PrefabReference refScript = other.GetComponent<PrefabReference>();
@@ -26,7 +26,6 @@ public class Vacuum : MonoBehaviour
         }
 
         Destroy(other.gameObject);
-        Debug.Log("slider.value = " + slider.value);
         slider.value += (1.0f / trashVacuumQty);
     }
 
