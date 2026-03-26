@@ -89,27 +89,6 @@ public class TrashGroundSpawner : MonoBehaviour
             float height = col.bounds.extents.y;
             obj.transform.position += Vector3.up * height;
         }
-
-        AdjustPositionAboveSurface(obj);
-    }
-
-    private void AdjustPositionAboveSurface(GameObject obj)
-    {
-        RaycastHit hit;
-        float raycastDistance = 10f; // You can adjust this distance based on the size of the object
-
-        // Cast a ray downward from the object's position
-        if (Physics.Raycast(obj.transform.position, Vector3.down, out hit, raycastDistance))
-        {
-            // If it hits something, adjust the position to be above the hit point
-            // This ensures the object doesn't fall below the ground
-            obj.transform.position = new Vector3(obj.transform.position.x,
-                hit.point.y + obj.GetComponent<Collider>().bounds.extents.y, obj.transform.position.z);
-
-            Debug.Log($"Adjusted position to: {obj.transform.position} after raycast hit");
-
-            obj.GetComponent<MeshRenderer>().enabled = false;
-        }
     }
 
     bool IsPositionFree(GameObject prefab, Vector3 position)
