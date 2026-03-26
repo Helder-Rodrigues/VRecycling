@@ -9,6 +9,9 @@ public class TreeManager : MonoBehaviour
     
     [SerializeField] private float sizeChangeAmount = 0.1f;
     [SerializeField] private float sizeChangeDuration = 0.1f;
+
+    [SerializeField] private Transform particleSpawn;
+    [SerializeField] private ParticleSystem happyParticles, sadParticles;
     
     private List<GameObject> trees = new List<GameObject>();
     private float currentScale;
@@ -24,6 +27,7 @@ public class TreeManager : MonoBehaviour
         currentScale += sizeChangeAmount;
         StopCoroutine(SizeTree());
         StartCoroutine(SizeTree());
+        Instantiate(happyParticles, particleSpawn.position, particleSpawn.rotation);
     }
 
     public void ShrinkTree()
@@ -33,6 +37,8 @@ public class TreeManager : MonoBehaviour
             currentScale = 0;
         StopCoroutine(SizeTree());
         StartCoroutine(SizeTree(-1));
+        Instantiate(sadParticles, particleSpawn.position, particleSpawn.rotation);
+        
     }
 
     private IEnumerator SizeTree(int direction = 1)
