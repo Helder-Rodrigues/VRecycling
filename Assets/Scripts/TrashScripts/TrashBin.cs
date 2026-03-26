@@ -26,15 +26,15 @@ public class TrashBin : MonoBehaviour
                 print("Correct trash type");
                 audioSource.PlayOneShot(winningSound);
                 TreeManager.Instance.GrowTree();
+                TrashManager.Instance.RemoveTrash();
             }
             else // Wrong trash
             {
                 print("Wrong trash type");
                 audioSource.PlayOneShot(failureSound);
                 TreeManager.Instance.ShrinkTree();
-                
+                SpawnTrash.Instance.SpawnSingleObject(trash.gameObject);
             }
-            TrashManager.Instance.RemoveTrash();
             Destroy(trash.gameObject);
         }
     }

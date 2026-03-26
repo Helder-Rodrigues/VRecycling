@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks::Meta.XR.BuildingBlocks.BuildingBlock
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 52faf302-4ed6-42a8-81ce-75400a299a15
+  instanceId: 59632993-4b05-4a4b-96c0-c28c2742219b
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -1729,8 +1729,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.698, z: 0}
   m_LocalScale: {x: 0.9, y: 0.2, z: 0.9}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5573054035688679048}
+  m_Children: []
   m_Father: {fileID: 3217784218482581468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2036544644695059504
@@ -2216,13 +2215,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5156382810184096684}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.89799994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7022748775488255366}
-  m_Father: {fileID: 8150820166312927530}
+  m_Father: {fileID: 3217784218482581468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &90281306693827745
 MonoBehaviour:
@@ -3066,6 +3065,7 @@ Transform:
   m_LocalScale: {x: 0.25754, y: 0.25754, z: 0.25754}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5573054035688679048}
   - {fileID: 8150820166312927530}
   m_Father: {fileID: 4421664840229760200}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3780,7 +3780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8621566182202462609, guid: 418119bc089da594caa33bd03ea445f2, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.18
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8621566182202462609, guid: 418119bc089da594caa33bd03ea445f2, type: 3}
       propertyPath: m_LocalScale.z

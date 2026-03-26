@@ -44,6 +44,11 @@ public class SpawnTrash : MonoBehaviour
         var copyOfList = new List<GameObject>(trashObject);
         StartCoroutine(SpawnDelay(copyOfList));
     }
+
+    public void SpawnSingleObject(GameObject trashObject)
+    {
+        Instantiate(trashObject, transform.position, Quaternion.identity);
+    }
     
     private IEnumerator SpawnDelay(List<GameObject> trashObject)
     {
