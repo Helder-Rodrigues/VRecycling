@@ -5,7 +5,7 @@ public class TrashButton : MonoBehaviour
     public void PressButton()
     {
         print("Button pressed");
-        SpawnTrash.Instance.SpawnObject(TrashManager.Instance.GetTrashList());
+        TrashManager.Instance.EmptyTrashList();
     }
 
     public void ReleaseButton()
