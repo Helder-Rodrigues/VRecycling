@@ -18,7 +18,6 @@ public class TrashGroundSpawner : MonoBehaviour
     [SerializeField] private Transform parent;
 
     [Header("Spawn Settings")]
-    public int trashQtyToSpawn = 10;
     private int trashSpawned = 0;
     [SerializeField] private int maxAttempts = 10;
     [SerializeField] private LayerMask overlapMask;
@@ -36,7 +35,7 @@ public class TrashGroundSpawner : MonoBehaviour
 
     private IEnumerator SpawnRoutine()
     {
-        while (trashSpawned < trashQtyToSpawn)
+        while (true)
         {
             float waitTime = Random.Range(minSpawnTime, maxSpawnTime);
             yield return new WaitForSeconds(waitTime);
