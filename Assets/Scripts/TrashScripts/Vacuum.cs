@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Vacuum : MonoBehaviour
 {
     [SerializeField] private TrashGroundSpawner trashInfo;
-    [SerializeField] private Slider slider;
+    public Slider slider;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip suckingSound;
 

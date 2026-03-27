@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrashManager : MonoBehaviour
 {
+    [SerializeField] private Vacuum vacuumInfo;
     public static TrashManager Instance;
     
     private static List<GameObject> trashList = new List<GameObject>();
@@ -42,6 +43,7 @@ public class TrashManager : MonoBehaviour
             print(trashInScene);
             SpawnTrash.Instance.SpawnObject(trashList);
             trashList.Clear();
+            vacuumInfo.slider.value = 0f;
         }
     }
     
