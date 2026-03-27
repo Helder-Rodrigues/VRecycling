@@ -21,17 +21,30 @@ namespace TrashScripts
         private Transform parent;
 
         [Header("Spawn Settings")]
+        [SerializeField] private float increaseSpawnTimeEachXSec = 60f;
         [SerializeField] private int maxAttempts = 10;
         [SerializeField] private LayerMask overlapMask;
         private float yOffset = 0.1f;
 
-        [Header("Player")] [SerializeField] private Transform player;
+        [Header("Player")] 
+        [SerializeField] private Transform player;
         [SerializeField] private float minDistanceFromPlayer = 10f;
         [SerializeField] private bool drawDistanceGizmos = false;
 
         private void Start()
         {
             StartCoroutine(SpawnRoutine());
+            StartCoroutine(IncreaseSpawnTimeRoutine());
+        }
+        
+        private IEnumerator IncreaseSpawnTimeRoutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(increaseSpawnTimeEachXSec);
+
+                maxSpawnTime += 2f;
+            }
         }
 
         private IEnumerator SpawnRoutine()
