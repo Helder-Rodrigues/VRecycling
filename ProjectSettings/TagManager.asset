@@ -21,6 +21,7 @@ TagManager:
   - QDSUITooltip
   - QDSUIBorderlessButton
   - QDSUITextSecondaryColor
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Ground
   - Grabbable
   - Overlay UI
-  - 
+  - InvisibleWall
   - 
   - 
   - 

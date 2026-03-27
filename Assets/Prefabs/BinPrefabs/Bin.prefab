@@ -441,7 +441,7 @@ MonoBehaviour:
   trashType: 0
   audioSource: {fileID: 4783448368986767827}
   winningSound: {fileID: 8300000, guid: e4647eea9499ef84a89070c6ad44f195, type: 3}
-  failureSound: {fileID: 8300000, guid: a9bbd2f89efe0e643abcac8b4c861c96, type: 3}
+  failureSound: {fileID: 8300000, guid: 5f565aef2d66ab94db29a33cc97343e6, type: 3}
   guideVisual: {fileID: 8391821417212517794}
 --- !u!82 &4783448368986767827
 AudioSource:

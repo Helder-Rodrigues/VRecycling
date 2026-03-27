@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GrabTriggerDetector : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip vacuumSound;
     [SerializeField] private BoxCollider vacuumColider;
 
     private bool leftInside = false;
@@ -83,31 +85,34 @@ public class GrabTriggerDetector : MonoBehaviour
 
         if (soundActivated)
             return;
+
         soundActivated = true;
         vacuumColider.enabled = true;
+        
+        if (audioSource != null && vacuumSound != null)
+        {
+            audioSource.clip = vacuumSound;
+            audioSource.Play();
+        }
     }
 
     private void DeactivateVacuum(bool leftBtnUp)
     {
-        Debug.Log("left: " + leftBtnUp);
         if (leftBtnUp)
         {
             if (!leftTriggerDown)
                 return;
-            Debug.Log("doing: "  + leftTriggerDown);
-            
+
             leftTriggerDown = false;
 
             if (rightTriggerDown)
                 return;
-            Debug.Log("turning off: " + leftTriggerDown);
-            
         }
         else
         {
             if (!rightTriggerDown)
                 return;
-            
+
             rightTriggerDown = false;
 
             if (leftTriggerDown)
@@ -116,6 +121,10 @@ public class GrabTriggerDetector : MonoBehaviour
 
         soundActivated = false;
         vacuumColider.enabled = false;
-        Debug.Log("nice: " + vacuumColider.enabled);
+        
+        if (audioSource != null)
+        {
+            audioSource.Stop();
+        }
     }
 }
