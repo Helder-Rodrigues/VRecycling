@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TrashScripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
