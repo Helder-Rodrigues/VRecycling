@@ -5635,6 +5635,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197119321}
   m_Mesh: {fileID: 8475118374295816918, guid: ef77be2d76d55b249b9166b03d8d51c3, type: 3}
+--- !u!114 &212861590 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4246705008737989916, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
+  m_PrefabInstance: {fileID: 1241573106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e0648d97721ad45b87b0eb56927705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Vacuum
 --- !u!1 &214420970
 GameObject:
   m_ObjectHideFlags: 0
@@ -42122,6 +42133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c520fa1d280a7b94c9e603b57ca8aa89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashManager
+  vacuumInfo: {fileID: 212861590}
 --- !u!4 &1920995020
 Transform:
   m_ObjectHideFlags: 0
