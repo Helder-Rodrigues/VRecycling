@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1464721f2283eb14e94a33e812b47be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.InteractableUnityEventWrapper
-  _interactableView: {fileID: 3083295005247427846}
+  _interactableView: {fileID: 5642939251609377147}
   _whenHover:
     m_PersistentCalls:
       m_Calls: []
@@ -438,9 +438,9 @@ MonoBehaviour:
   _whenSelect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5469322847508360545}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: -1735423992998016870}
+        m_TargetAssemblyTypeName: Trash, Assembly-CSharp
+        m_MethodName: TryStartGuide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -450,9 +450,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -1735423992998016870}
-        m_TargetAssemblyTypeName: Trash, Assembly-CSharp
-        m_MethodName: TryStartGuide
+      - m_Target: {fileID: 5469322847508360545}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
