@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +13,9 @@ public class TrashGuide : MonoBehaviour
         Instance = this;
     }
 
-    public void StartGuidePlayer(TrashType trashType)
+    public void StartGuideTrashSort(TrashType trashType)
     {
+        print("TryStartGuide instance exist");
         foreach (TrashBin bin in trashBins)
         {
             if (bin.TrashType == trashType)
@@ -24,7 +26,7 @@ public class TrashGuide : MonoBehaviour
         }
     }
 
-    public void EndGuidePlayer(TrashType trashType)
+    public void EndGuideTrashSort(TrashType trashType)
     {
         foreach (TrashBin bin in trashBins)
         {
@@ -35,4 +37,6 @@ public class TrashGuide : MonoBehaviour
             }
         }
     }
+
+    
 }

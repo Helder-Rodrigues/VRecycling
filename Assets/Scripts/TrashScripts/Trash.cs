@@ -16,9 +16,11 @@ public class Trash : MonoBehaviour
 
     public void TryStartGuide()
     {
+        print("TryStartGuide");
         if (TrashGuide.Instance)
         {
-            TrashGuide.Instance.StartGuidePlayer(trashType);
+            print("TryStartGuide instance exsist");
+            TrashGuide.Instance.StartGuideTrashSort(trashType);
         }
     }
 
@@ -26,7 +28,7 @@ public class Trash : MonoBehaviour
     {
         if (TrashGuide.Instance)
         {
-            TrashGuide.Instance.EndGuidePlayer(trashType);
+            TrashGuide.Instance.EndGuideTrashSort(trashType);
         }
         
     }

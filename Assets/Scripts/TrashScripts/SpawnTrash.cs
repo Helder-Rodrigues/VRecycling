@@ -6,13 +6,14 @@ using UnityEngine;
 public class SpawnTrash : MonoBehaviour
 {   
     public static SpawnTrash Instance;
-
+    
+    [SerializeField] private bool addThis0TrashToList = true;
     [SerializeField] private List<GameObject> trashPrefab;
     [SerializeField] private float delay = 0.3f;
     [SerializeField] private List<Vector3> factors;
+    
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Instance = this;
@@ -25,10 +26,11 @@ public class SpawnTrash : MonoBehaviour
             new Vector3(-0.05f, 0f, 0.05f)
             };
         
-        foreach (var trash in trashPrefab)
-        {
-            TrashManager.Instance.AddTrashToList(trash);
-        }
+        if (addThis0TrashToList) 
+            foreach (var trash in trashPrefab)
+            {
+                TrashManager.Instance.AddTrashToList(trash);
+            }
     }
 
     
@@ -47,7 +49,9 @@ public class SpawnTrash : MonoBehaviour
     {
         for (int i = 0; i < trashObject.Count; i++)
         {   
-            Instantiate(trashObject[i], transform.position + factors[i % 4], Quaternion.identity);
+            var instance = Instantiate(trashObject[i], transform.position + factors[i % 4], Quaternion.identity);
+            var script = instance.AddComponent<PrefabReference>();
+            script.originalPrefab = trashObject[i];
             yield return new WaitForSeconds(delay);
         }
     }
