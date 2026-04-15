@@ -8,7 +8,7 @@ public class GameGuide : MonoBehaviour
     [SerializeField] private Vector3 offset = new Vector3(0.0f, 1.0f, 0.0f);
     private Renderer guideRenderer;
 
-    private void Start()
+    private void Awake()
     {
         guideRenderer = guideArrow.GetComponent<Renderer>();
     }

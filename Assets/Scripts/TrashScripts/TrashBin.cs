@@ -13,6 +13,8 @@ public class TrashBin : MonoBehaviour
 
     public void ToggleGuideVisual(bool toggle)
     {
+        if (!Tutorial.IsOn) return;
+        
         guideVisual.enabled = toggle;
     }
     
