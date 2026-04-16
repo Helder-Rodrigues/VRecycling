@@ -27042,7 +27042,7 @@ PrefabInstance:
     - target: {fileID: 3359284330942991769, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
       propertyPath: vacuumSound
       value: 
-      objectReference: {fileID: 8300000, guid: 3a603b00e19335c4c93fde0800544eef, type: 3}
+      objectReference: {fileID: 8300000, guid: 9cb9ba3e34738c74280aefb38238e909, type: 3}
     - target: {fileID: 4246705008737989916, guid: 5de087a5830c5b947a38de20de9bcdd6, type: 3}
       propertyPath: trashInfo
       value: 
