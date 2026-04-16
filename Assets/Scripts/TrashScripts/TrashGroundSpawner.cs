@@ -21,7 +21,7 @@ namespace TrashScripts
         private Transform parent;
 
         [Header("Spawn Settings")]
-        [SerializeField] private float increaseSpawnTimeEachXSec = 60f;
+        [SerializeField] private float increaseSpawnTimeEachXSec = 10f;
         [SerializeField] private int maxAttempts = 10;
         [SerializeField] private LayerMask overlapMask;
         private float yOffset = 0.1f;
@@ -43,6 +43,7 @@ namespace TrashScripts
             {
                 yield return new WaitForSeconds(increaseSpawnTimeEachXSec);
 
+                minSpawnTime += 1f;
                 maxSpawnTime += 2f;
             }
         }

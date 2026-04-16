@@ -24539,8 +24539,9 @@ MonoBehaviour:
   spawnAreas:
   - {fileID: 258669014}
   minSpawnTime: 0.5
-  maxSpawnTime: 2
+  maxSpawnTime: 5
   parent: {fileID: 1175343357}
+  increaseSpawnTimeEachXSec: 10
   maxAttempts: 100
   overlapMask:
     serializedVersion: 2
