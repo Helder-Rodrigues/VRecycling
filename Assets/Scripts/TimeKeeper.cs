@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TimeKeeper : MonoBehaviour
@@ -19,6 +20,8 @@ public class TimeKeeper : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject); // persist across scenes
+        
+        StartTimer();
     }
 
     public void StartTimer()
@@ -36,5 +39,15 @@ public class TimeKeeper : MonoBehaviour
     public float GetTime()
     {
         return isRunning ? Time.time - startTime : endTime - startTime;
+    }
+    
+    public string GetFormattedTime()
+    {
+        float time = GetTime();
+
+        int minutes = Mathf.FloorToInt(time / 60f);
+        int seconds = Mathf.FloorToInt(time % 60f);
+
+        return $"{minutes:00}:{seconds:00}";
     }
 }

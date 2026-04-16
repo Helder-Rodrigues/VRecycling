@@ -40,7 +40,7 @@ public class TrashManager : MonoBehaviour
         if (SpawnTrash.Instance)
         {
             trashInScene += trashList.Count;
-            print("Trash in scene: " +trashInScene);
+            //print("Trash in scene: " +trashInScene);
             SpawnTrash.Instance.SpawnObject(trashList);
             trashList.Clear();
             vacuumInfo.slider.value = 0f;
