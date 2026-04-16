@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,7 +21,10 @@ public class TimeKeeper : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject); // persist across scenes
-        
+    }
+
+    private void Start()
+    {
         StartTimer();
     }
 
