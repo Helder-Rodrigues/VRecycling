@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class GameTutorial : MonoBehaviour
