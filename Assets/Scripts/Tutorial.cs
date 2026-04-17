@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
-    public static bool IsOn = true;
+    public static bool IsOn = false;
     
     
     [SerializeField] private TextMeshPro text;

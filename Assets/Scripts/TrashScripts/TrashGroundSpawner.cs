@@ -20,41 +20,69 @@ namespace TrashScripts
         [Header("Trash Parent")] [SerializeField]
         private Transform parent;
 
-        [Header("Spawn Settings")]
-        [SerializeField] private float increaseSpawnTimeEachXSec = 60f;
+        [Header("Spawn Settings")] [SerializeField]
+        private float increaseSpawnTimeEachXSec = 10f;
         [SerializeField] private int maxAttempts = 10;
         [SerializeField] private LayerMask overlapMask;
         private float yOffset = 0.1f;
+        private bool keepSpawning = true;
 
-        [Header("Player")] 
-        [SerializeField] private Transform player;
+        [Header("Player")] [SerializeField] private Transform player;
         [SerializeField] private float minDistanceFromPlayer = 10f;
         [SerializeField] private bool drawDistanceGizmos = false;
 
+        private Coroutine spawnRoutine;
+        private Coroutine increaseRoutine;
+        
         private void Start()
         {
-            StartCoroutine(SpawnRoutine());
-            StartCoroutine(IncreaseSpawnTimeRoutine());
+            spawnRoutine = StartCoroutine(SpawnRoutine());
+            increaseRoutine = StartCoroutine(IncreaseSpawnTimeRoutine());
         }
-        
+
         private IEnumerator IncreaseSpawnTimeRoutine()
         {
-            while (true)
+            while (keepSpawning)
             {
                 yield return new WaitForSeconds(increaseSpawnTimeEachXSec);
 
-                maxSpawnTime += 2f;
+                int timeToAdd = 1;
+                if (minSpawnTime < 5f)
+                {
+                    minSpawnTime += timeToAdd;
+                    timeToAdd = 2;
+                }
+
+                maxSpawnTime += timeToAdd;
             }
         }
 
         private IEnumerator SpawnRoutine()
         {
-            while (true)
+            while (keepSpawning)
             {
                 float waitTime = Random.Range(minSpawnTime, maxSpawnTime);
                 yield return new WaitForSeconds(waitTime);
 
                 TrySpawn();
+            }
+        }
+
+        public void KillSpawn()
+        {
+            keepSpawning = false;
+
+            if (spawnRoutine != null)
+                StopCoroutine(spawnRoutine);
+
+            if (increaseRoutine != null)
+                StopCoroutine(increaseRoutine);
+            
+            //Destroy remaining trash
+            foreach (Transform child in parent)
+            {
+                if (child.CompareTag("Trash"))
+                    Destroy(child.gameObject);
             }
         }
 
